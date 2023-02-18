@@ -14,6 +14,7 @@ class MyCard extends StatelessWidget {
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               width: MediaQuery.of(context).size.width * .5 ,
@@ -31,14 +32,17 @@ class MyCard extends StatelessWidget {
               height: 5,
             ),
              Padding(
-               padding: const EdgeInsets.all(8.0),
+               padding: const EdgeInsets.only(right:150.0, bottom: 8),
                child: Text(
-                  "iphone", textAlign: TextAlign.left,
+                  "iphone", textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15)
                 ),
              ),
 
-            ElevatedButton.icon(onPressed: () {}, icon: Icon(FontAwesomeIcons.cartShopping, size: 15,), label: Text("add to cart", style: TextStyle(fontWeight: FontWeight.w500 ),), style: ElevatedButton.styleFrom(primary: Color.fromRGBO(107, 137, 232, 1)),)
+            Padding(
+              padding: const EdgeInsets.only(right:100.0),
+              child: ElevatedButton.icon(onPressed: () {}, icon: Icon(FontAwesomeIcons.cartShopping, size: 15,), label: Text("add to cart", style: TextStyle(fontWeight: FontWeight.w500 ),), style: ElevatedButton.styleFrom(primary: Color.fromRGBO(107, 137, 232, 1)),),
+            )
           ],
         ),
     );
